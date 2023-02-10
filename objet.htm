@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    var lstStag1 =[{"num":1,"nom":"alami karim","age":20,"notes":[12,18,6,15]},
+            {"num":2,"nom":"Sabir Laila","age":19,"notes":[10,14,16,15]},
+            {"num":3,"nom":"Kamili Radia","age":25,"notes":[8,15,10,13]}]
+    var lstStag2 =[
+        {"num":1,
+        "nom":"alami karim",
+        "age":20,
+        "notes":[
+            {"matiere":"Arabe","note":12},
+            {"matiere":"Math","note":6},
+            {"matiere":"Français","note":16},
+            {"matiere":"SVT","note":15}]
+        },
+        {"num":2,
+        "nom":"Sabir Laila",
+        "age":19,
+        "notes":[
+            {"matiere":"Arabe","note":16},
+            {"matiere":"Math","note":18},
+            {"matiere":"Français","note":10},
+            {"matiere":"SVT","note":9}]
+        },
+        {"num":3,
+        "nom":"Kamili Radia",
+        "age":25,
+        "notes":[
+            {"matiere":"Arabe","note":16},
+            {"matiere":"Math","note":14},
+            {"matiere":"Français","note":15},
+            {"matiere":"SVT","note":19}]
+        }
+]
+
+    </script>
+</head>
+
+<body>
+<!--
+    <table style="width: 100%">
+        <tr><th>Numéro</th><th>Nom</th><th>Age</th><th>Notes</th></tr>
+    <script>
+        for (var i=0;i<lstStag1.length;i++)
+        {
+            document.write(
+                "<tr>"+
+          "<td>" +lstStag1[i].num + "</td>"+
+          "<td>" +lstStag1[i].nom + "</td>"+
+          "<td>" +lstStag1[i].age + "</td>"+
+          "<td>" + lstStag1[i].notes + "</td>"+
+
+        "</tr>")
+        
+        }
+    </script>
+    </table>
+-->
+<h1 id="t1">Liste des stagiaires</h1>
+    <script>
+        for (var i=0;i<lstStag2.length;i++)
+
+        {
+            document.write(
+                
+          "Numéro :" +lstStag2[i].num + "<br/>"+
+          "Nom et prénom :" +lstStag2[i].nom + "<br/>"+
+          "Age " +lstStag2[i].age + "<br/>"+
+          "Liste des notes :<br/>")
+
+                for (var j=0;j<lstStag2[i].notes.length;j++)
+                { document.write("- " + lstStag2[i].notes[j].matiere + " : " + lstStag2[i].notes[j].note + "<br/>")}
+
+
+          document.write("<hr/>")
+
+             
+        }
+        document.getElementById("t1").style.color="red"
+        document.getElementById("t1").style.backgroundColor="blue";
+    </script>
+ 
+
+
+</body>
+</html>
